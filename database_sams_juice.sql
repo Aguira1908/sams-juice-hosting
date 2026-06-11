@@ -21,14 +21,14 @@
 -- ============================================================
 
 -- Buat user (jalankan sebagai SYSDBA di container FREEPDB1)
-CREATE USER samsjuice
-    IDENTIFIED BY sams123
-    DEFAULT TABLESPACE USERS
-    TEMPORARY TABLESPACE TEMP
-    QUOTA UNLIMITED ON USERS;
+-- CREATE USER samsjuice
+--     IDENTIFIED BY sams123
+--     DEFAULT TABLESPACE USERS
+--     TEMPORARY TABLESPACE TEMP
+--     QUOTA UNLIMITED ON USERS;
 
 -- Berikan privilege minimum yang dibutuhkan
-GRANT CONNECT, RESOURCE, CREATE SESSION TO samsjuice;
+GRANT CONNECT, RESOURCE, CREATE SESSION TO sams_juice;
 GRANT CREATE TABLE, CREATE SEQUENCE, CREATE VIEW TO samsjuice;
 
 -- Koneksi di koneksi.php menggunakan user ini:
