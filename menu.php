@@ -179,7 +179,7 @@ footer {
 
         <?php
         $adaProduk = false;
-        while ($row = oci_fetch_assoc($stid)) {
+        while ($row = oci_fetch_array($stid, OCI_ASSOC | OCI_RETURN_LOBS)) {
             $adaProduk = true;
         ?>
             <div class="col-md-6 col-lg-4">

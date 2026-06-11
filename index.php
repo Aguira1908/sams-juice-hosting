@@ -7,7 +7,7 @@ $queryProduk = "SELECT * FROM PRODUK ORDER BY ID_PRODUK";
 $stidProduk = oci_parse($conn, $queryProduk);
 oci_execute($stidProduk);
 
-while ($row = oci_fetch_assoc($stidProduk)) {
+while ($row = oci_fetch_array($stidProduk, OCI_ASSOC | OCI_RETURN_LOBS)) {
     $produk[] = $row;
 }
 ?>
